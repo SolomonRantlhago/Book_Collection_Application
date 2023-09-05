@@ -1,0 +1,44 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Book";
+}
+
+<h4>Add a Book</h4>
+
+<form asp-action="Index" method="post" role="form" class="p-1">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @*Title controls*@
+<div class="form-group">
+    <label asp-for="BookTitle"></label>
+    <input asp-for="BookTitle" class="form-control" />
+</div>
+
+    @*Author controls*@
+    <div class="form-group">
+        <label asp-for="BookAuthor"></label>
+        <input asp-for="BookAuthor" class="form-control" />
+    </div>
+
+    @*ISBN controls*@
+    <div class="form-group">
+        <label asp-for="BookISBN"></label>
+        <input asp-for="BookISBN" class="form-control" />
+    </div>
+
+    @*IsRead controls*@
+    <div class="form-group">
+        <label asp-for="BookIsRead">Have you read this book?</label>
+        <select asp-for="BookIsRead" class="custom-select">
+            <option value="">Choose an option</option>
+            <option value="true">Yes, I have read this book</option>
+            <option value="false">No, I still want to read this book</option>
+        </select>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">
+            Add Book to Collection
+        </button>
+    </div>
+</form>

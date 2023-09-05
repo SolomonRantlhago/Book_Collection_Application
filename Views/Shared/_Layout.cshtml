@@ -1,0 +1,76 @@
+﻿
+<!DOCTYPE html>
+<!-- Solomon Rantlhago-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Books - @ViewData["Title"]</title>
+
+    <!-- Bootstrap CSS -->
+    <link asp-href-include="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template (Your own styles) -->
+    <link rel="stylesheet" asp-href-include="/styles/custom.css" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar navbar-expand-md bg-success navbar-dark">
+        <div class="container">
+            <!-- Brand -->
+            <!-- Link to Home page -->
+            <a class="navbar-brand">My Book Collection</a>
+
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#MyNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="MyNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="index"
+                           class="nav-link">Home</> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Books" asp-action="index"
+                           class="nav-link">Add</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Library"
+                           class="nav-link">Library</> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-2">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+        <div class="mt-1 p-2 bg-dark text-light text-center">
+            <p>Created by: SM Rantlhago</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script asp-src-include="lib/jquery/jquery.slim.min.js"></script>
+
+    <script asp-src-include="lib/popper.js/popper.min.js"></script>
+
+    <script asp-src-include="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

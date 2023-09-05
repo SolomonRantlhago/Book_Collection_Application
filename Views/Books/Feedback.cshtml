@@ -1,0 +1,22 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Feedback";
+}
+
+
+    <div class="text-center">
+        
+        <h3 >@Model.BookTitle was added to your collection!</h3>
+        <p>
+            @if (Model.BookIsRead == "true")
+            {
+            <p>You have already read this book.</p>
+            }
+            else
+            {
+            <p>You still want to read this book.</p>
+            }
+
+         <p/>
+        </div>
+
